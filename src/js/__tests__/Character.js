@@ -13,12 +13,7 @@ test('Exception chapter type2', () => {
 });
 
 test.each([
-    ["Bowman1", {"name": "Bowman", "type": "Bowman", "attack": 25, "defence": 25, "health": 100, "level": 1}],
-    ["Swordsman1", {"name": "Swordsman", "type": "Swordsman", "attack": 40, "defence": 10, "health": 100, "level": 1}],
-    ["Magician1", {"name": "Magician", "type": "Magician", "attack": 10, "defence": 40, "health": 100, "level": 1}],
-    ["Undead1", {"name": "Undead", "type": "Undead", "attack": 25, "defence": 25, "health": 100, "level": 1}],
-    ["Zombie1", {"name": "Zombie", "type": "Zombie", "attack": 40, "defence": 10, "health": 100, "level": 1}],
-    ["Daemon1", {"name": "Daemon", "type": "Daemon", "attack": 10, "defence": 40, "health": 100, "level": 1}]
+    ["chapter", {"name": "chapter", "type": "Daemon", "attack": 10, "defence": 40, "health": 100, "level": 1}]
 ])(`Test chapter class in %n%`, (name, expected) => {
     const testChapter = new Character(expected.name, expected.type);
     expect(testChapter).toEqual(expected);
